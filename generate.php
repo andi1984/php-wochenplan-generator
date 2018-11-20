@@ -9,11 +9,12 @@ $dompdf = new Dompdf();
 // instantiate Twig
 $loader = new Twig_Loader_Filesystem('./templates');
 $twig = new Twig_Environment($loader, array(
-    'cache' => './twig_cache',
+    //'cache' => './twig_cache',
 ));
 
 // Generate HTML through Twig (using GET params) and load it into DomPDF.
-$dompdf->loadHtml($twig->render('index.html', $_GET));
+// error_log(json_encode($_GET));
+$dompdf->loadHtml($twig->render('index.twig', $_GET));
 
 // (Optional) Setup the paper size and orientation
 $dompdf->setPaper('A4', 'landscape');
@@ -22,4 +23,4 @@ $dompdf->setPaper('A4', 'landscape');
 $dompdf->render();
 
 // Output the generated PDF to Browser
-$dompdf->stream();
+$dompdf->stream('wochenplan.pdf');

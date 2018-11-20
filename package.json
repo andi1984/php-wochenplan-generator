@@ -1,0 +1,23 @@
+{
+  "name": "php-wochenplan-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andi1984/php-wochenplan-generator.git"
+  },
+  "author": "Andreas Sander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andi1984/php-wochenplan-generator/issues"
+  },
+  "homepage": "https://github.com/andi1984/php-wochenplan-generator#readme",
+  "private": true,
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
+}

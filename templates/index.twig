@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>{{name}}</h1>
+    {% for area in areas %}
+        {{ include('area.twig') }}
+    {% endfor %}
+</body>
+</html>
