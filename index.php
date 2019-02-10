@@ -15,7 +15,7 @@
             <div id="dynamic-form">
                 <button type="button" v-on:click="addArea">Fach hinzufügen</button>
                 <div v-show="areas.length">
-                    <my-area v-for="area in areas"/>
+                    <my-area v-for="area in areas" :area="area"/>
                 </div>
                 <noscript>Bitte JavaScript aktivieren!</noscript>
             </div>

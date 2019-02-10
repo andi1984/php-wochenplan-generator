@@ -1,4 +1,9 @@
 {#
-    Global var: area
+    Global vars: 
+    - area.type
+    - area.tasks
 #}
-<h2>Mein Fach: {{area.name}}</h2>
+<h2>Mein Fach: {{area.type}}</h2>
+{% for task in area.tasks %}
+    {{ include('task.twig') }}
+{% endfor %}
