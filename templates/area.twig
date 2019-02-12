@@ -2,8 +2,19 @@
     Global vars: 
     - area.type
     - area.tasks
+    - last (if this is the last area)
 #}
-<h2>Mein Fach: {{area.type}}</h2>
 {% for task in area.tasks %}
-    {{ include('task.twig') }}
+<tr class="planner__area {% if not last %}planner__area--not-last{% endif %}">
+    {% if loop.index == 1 %}
+    <td rowspan="{{area.tasks|length}}">{{area.type}}</td>
+    {% endif %}
+    <td>
+        {{ include('task.twig') }}
+    </td>
+    <td>
+        <input type="checkbox" />
+        <input type="checkbox" />
+    </td>
+</tr>
 {% endfor %}
