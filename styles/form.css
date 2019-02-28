@@ -1,0 +1,13 @@
+body,
+html {
+    margin: 5vw;
+}
+
+hr {
+    height: 2px;
+    background-color: #eee;
+}
+
+.hero {
+    margin-bottom: 10vh;
+}
