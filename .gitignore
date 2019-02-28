@@ -6,3 +6,4 @@ twig_cache/
 # composer.lock
 
 node_modules/
+.idea/
