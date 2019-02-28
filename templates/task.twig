@@ -1,11 +1,12 @@
 {#
-    Global vars: 
+    Global vars:
+    - labels
     - task.description
     - task.category
     - task.social
 #}
 <span>
         {{task.description}}
-        {{task.category}}
-        {{task.social}}
+        {{labels[task.category]}}
+        {{labels[task.social]}}
 </span>

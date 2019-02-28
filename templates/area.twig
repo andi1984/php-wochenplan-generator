@@ -1,5 +1,6 @@
 {#
-    Global vars: 
+    Global vars:
+    - labels - UI labels
     - area.type
     - area.tasks
     - last (if this is the last area)
@@ -7,7 +8,7 @@
 {% for task in area.tasks %}
 <tr class="planner__area {% if not last %}planner__area--not-last{% endif %}">
     {% if loop.index == 1 %}
-    <td rowspan="{{area.tasks|length}}">{{area.type}}</td>
+    <td rowspan="{{area.tasks|length}}">{{labels[area.type]}}</td>
     {% endif %}
     <td>
         {{ include('task.twig') }}
