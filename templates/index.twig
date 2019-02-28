@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="styles/pdf.css">
 </head>
 <body>
     <h1>{{name}}</h1>
-    {% for area in areas %}
-        {{ include('area.twig') }}
-    {% endfor %}
+    <table class="planner">
+        <thead>
+            <tr>
+                <th>Lernbereich</th>
+                <th>Arbeiten</th>
+                <th>Häkchen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for area in areas %}
+                {% with { last: loop.index == areas|length } %}
+                    {{ include('area.twig') }}
+                {% endwith %}
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>

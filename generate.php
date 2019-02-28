@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 use Dompdf\Dompdf;
 
 // instantiate and use the dompdf class
-$dompdf = new Dompdf();
+$dompdf = new Dompdf(array('debugLayout' => false));
 
 // instantiate Twig
 $loader = new Twig_Loader_Filesystem('./templates');
