@@ -42,3 +42,8 @@ body {
 .planner__area--not-last td {
   border-bottom: 1px solid black;
 }
+
+/* Checkbox area fixed width*/
+.planner__area .checkboxes {
+  width: 35px;
+}

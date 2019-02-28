@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
 <head>
     <title>Wochenplan Generator</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
@@ -19,6 +19,14 @@
 </section>
 <form action="generate.php" method="GET">
     <div id="dynamic-form" class="field">
+        <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <!-- navbar items, navbar burger... -->
+                <div class="navbar-item">
+                    <button class="button" type="button" v-on:click="addArea">Fach hinzufügen</button>
+                </div>
+            </div>
+        </nav>
         <fieldset class="field">
             <legend class="subtitle is-3">Metadaten</legend>
 
@@ -27,9 +35,6 @@
                 <input id="name" type="text" name="name"/>
             </div>
         </fieldset>
-        <div class="field control">
-            <button class="button" type="button" v-on:click="addArea">Fach hinzufügen</button>
-        </div>
         <my-area v-for="area in areas" :area="area"/>
     </div>
     <button class="button is-large">PDF erzeugen</button>
